@@ -74,3 +74,4 @@ xyplot(steps~interval|day,
        xlab="Interval",ylab="Number of steps",
        layout=c(1,2)) #time series plot
 ```
+
