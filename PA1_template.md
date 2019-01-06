@@ -1,6 +1,7 @@
-Reproducible Research: Peer Assessment 1
-========================================================
-
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
 
 ## Loading and preprocessing the data
 
@@ -31,7 +32,7 @@ by.day<-aggregate(activity$steps~activity$date,data=activity,FUN=sum,nar.rm=F) #
 hist(by.day[,2],xlab="Steps", main="Number of steps per day",col="aliceblue") #histogram
 ```
 
-![plot of chunk unnamed-chunk-55](figure/unnamed-chunk-55-1.png)
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
 
 ```r
 mean(by.day[,2],na.rm=TRUE) #mean
@@ -56,7 +57,7 @@ by.interval<-aggregate(activity$steps~activity$interval,data=activity,FUN=mean,n
 plot(by.interval,type="l",xlab="5-minute intervals", ylab="Steps", main="Average of steps by interval") #plot
 ```
 
-![plot of chunk unnamed-chunk-56](figure/unnamed-chunk-56-1.png)
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
 
 ###Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?:
 The interval with the maximum number of steps is **835**.  
@@ -78,7 +79,7 @@ by.day.full<-aggregate(full.activity$steps~full.activity$date,data=full.activity
 hist(by.day.full[,2],xlab="Steps",main="Number of steps per day",col="aliceblue") #histogram
 ```
 
-![plot of chunk unnamed-chunk-57](figure/unnamed-chunk-57-1.png)
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
 
 ```r
 mean(by.day.full[,2],na.rm=TRUE) #mean
@@ -123,4 +124,4 @@ xyplot(steps~interval|day,
        layout=c(1,2)) #time series plot
 ```
 
-![plot of chunk unnamed-chunk-59](figure/unnamed-chunk-59-1.png)
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png)
